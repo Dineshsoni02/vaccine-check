@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 // import Chip from "@material-ui/core/Chip";
 // import Accordion from "@material-ui/core/Accordion";
 // import AccordionDetails from "@material-ui/core/AccordionDetails";
 // import AccordionSummary from "@material-ui/core/AccordionSummary";
 // import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { Divider, Grid, Paper } from "@material-ui/core";
+import { Grid, Paper } from "@material-ui/core";
 // import FaceIcon from "@material-ui/icons/Face";
 
 import "./Centers.css";

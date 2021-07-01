@@ -1,7 +1,11 @@
 .App {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   text-align: center;
+  width: 100% !important;
+  background: chartreuse;
+  display: flex;
+  justify-content: center;
 }
 
 .backdrop {
