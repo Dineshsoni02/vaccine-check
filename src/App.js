@@ -5,7 +5,6 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./App.css";
 import { makeStyles } from "@material-ui/core/styles";
-// import { flexbox } from "@material-ui/system";
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -56,19 +55,17 @@ function App() {
   };
 
   return (
-    <div className="App" 
-    >
+    <div className="App">
       <Grid
         container
         direction="column"
         justify="center"
-        style={{ width: "40%"}}
+        style={{ width: "30%" }}
+        
       >
-        <Paper elevation={3} >
-          <Grid item xs={12} 
-          style={{ background: "blue" }}
-          >
-            <h1>VACCINATION APP</h1>
+        <Paper elevation={3} style={{ borderRadius: "25px" }}>
+          <Grid item xs={12} style={{ background: "blue" }}>
+            <h1 style={{ color: "white" }}>VACCINATION APP</h1>
           </Grid>
 
           <Grid item xs={12}>
@@ -77,7 +74,7 @@ function App() {
               flexDirection="row"
               alignItems="center"
               justifyContent="center"
-              marginLeft="-2rem"
+              // marginLeft="-2rem"
               // style={{ background: "aquamarine" }}
             >
               {/* Demo */}
@@ -87,7 +84,7 @@ function App() {
                 variant="outlined"
                 color="primary"
                 onClick={handleToggle}
-                style={{ border: "none", marginLeft: "1rem" }}
+                style={{ border: "none",color:"#318AF4",fontSize:"1.1rem",marginTop:"8px"}}
               >
                 {`${dateValue.getDate()}-${
                   dateValue.getMonth() + 1
@@ -112,8 +109,10 @@ function App() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} 
-          // style={{ background: "grey" }}
+          <Grid
+            item
+            xs={12}
+            // style={{ background: "grey" }}
           >
             <Box
               display="flex"
@@ -122,9 +121,19 @@ function App() {
               justifyContent="center"
             >
               <h3>Enter Pin:</h3>
-              
+
               <input
-                style={{ border: "none", marginLeft: "1rem",outlineColor:"rgba(10,10,10,0.5)",lineHeight:"1.5rem"}}
+                style={{
+                  border: "none",
+                  marginLeft: "0.5rem",
+                  marginTop:"5px",
+                  outlineColor: "#318AF4",
+                  lineHeight: "1rem",
+                  fontSize:"1.08rem",
+                  width:"5.5rem",
+                  padding:"5px",
+                  color:"#093EF0"
+                }}
                 type="tel"
                 placeholder="Enter PIN"
                 value={pinValue}
@@ -136,6 +145,7 @@ function App() {
                     setPinValue(value);
                   }
                 }}
+                onKeyUp={(e) => (e.keyCode === 13 ? searchHandler() : "")}
               ></input>
             </Box>
           </Grid>
@@ -143,35 +153,32 @@ function App() {
             <small className="field-error-msg">{errorMsg}</small>
           </Grid>
           <Grid item xs={12}>
-            <Button variant="outlined" color="primary" onClick={searchHandler}>
+            <Button variant="outlined" color="primary" onClick={searchHandler} style={{borderRadius:"25px", lineHeight:"20px", marginBottom:"12px", borderColor:"#318AF4" }}>
               Search
             </Button>
           </Grid>
         </Paper>
       </Grid>
       <Grid
-            container
-            // spacing={1}
-            style={{
-              // width: "100%",
-              maxWidth: "700px",
-              // margin: "auto",
-              // padding: "5px",
-            }}
-            justify="center"
-          >
-            {centers ? (
-              centers.length === 0 ? (
-                <h2>No Centers found at this PIN code and Date.</h2>
-              ) : (
-                centers.map((item, i) => (
-                  <Centers key={i} data={item} sessions={item.sessions} />
-                ))
-              )
-            ) : (
-              ""
-            )}
-          </Grid>
+        container
+        style={{
+          width: "50%",
+        }}
+       
+        
+      >
+        {centers ? (
+          centers.length === 0 ? (
+            <h2>No Centers found at this PIN code and Date.</h2>
+          ) : (
+            centers.map((item, i) => (
+              <Centers key={i} data={item} sessions={item.sessions} />
+            ))
+          )
+        ) : (
+          ""
+        )}
+      </Grid>
     </div>
   );
 }
