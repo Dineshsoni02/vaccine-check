@@ -1,13 +1,45 @@
-.App {
-  height: 100vh;
-  position: relative;
-  text-align: center;
-  width: 100% !important;
-  background: chartreuse;
-  display: flex;
-  justify-content: space-around;
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
 }
+
+.App {
+  min-height: 100vh;
+  max-width: 100% ;
+  background: rgb(55, 153, 192);
+  background:radial-gradient(circle, rgba(70,40,114,1) 5%, rgba(218,222,225,1) 100%);
+  padding: 2.5rem;
+}
+.hero{
+  display: flex !important;
+  justify-content: space-between ;
+  align-items: center;
+  background-image: url(./assets/bg.jpg);
+  background-position: top;
+  background-size: cover;
+}
+.left_portion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -3rem;
+  bottom:-3rem;
+}
+
+
+.outer{
+  height:50%;
+  width: 60%;
+  padding: 2rem;
+  background: tomato;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+
 
 .backdrop {
   position: absolute;
