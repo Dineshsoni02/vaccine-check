@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Grid,
-  Button,
-  Backdrop,
-  Box,
-  Container,
-} from "@material-ui/core";
+import { Grid, Button, Backdrop, Container } from "@material-ui/core";
 import Centers from "./components/Centers";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -62,131 +56,7 @@ function App() {
   };
 
   return (
-    // <div className="App">
-    //   <Grid
-    //     container
-    //     direction="column"
-    //     justify="center"
-    //     style={{ width: "30%" }}
-
-    //   >
-    //     <Paper elevation={3} style={{ borderRadius: "25px" }}>
-    //       <Grid item xs={12} style={{ background: "blue" }}>
-    //         <h1 style={{ color: "white" }}>VACCINATION APP</h1>
-    //       </Grid>
-
-    //       <Grid item xs={12}>
-    //         <Box
-    //           display="flex"
-    //           flexDirection="row"
-    //           alignItems="center"
-    //           justifyContent="center"
-    //           // marginLeft="-2rem"
-    //           // style={{ background: "aquamarine" }}
-    //         >
-    //           {/* Demo */}
-
-    //           <h3>Select date : </h3>
-    //           <Button
-    //             variant="outlined"
-    //             color="primary"
-    //             onClick={handleToggle}
-    //             style={{ border: "none",color:"#318AF4",fontSize:"1.1rem",marginTop:"8px"}}
-    //           >
-    //             {`${dateValue.getDate()}-${
-    //               dateValue.getMonth() + 1
-    //             }-${dateValue.getFullYear()}`}
-    //           </Button>
-    //           <Backdrop
-    //             className={classes.backdrop}
-    //             open={open}
-    //             onClick={handleClose}
-    //           >
-    //             <Calendar
-    //               value={dateValue}
-    //               defaultView="month"
-    //               minDate={new Date()}
-    //               onClickDay={(value) => {
-    //                 setDateValue(value);
-    //               }}
-    //             />
-    //           </Backdrop>
-
-    //           {/* sasdasd */}
-    //         </Box>
-    //       </Grid>
-
-    //       <Grid
-    //         item
-    //         xs={12}
-    //         // style={{ background: "grey" }}
-    //       >
-    //         <Box
-    //           display="flex"
-    //           flexDirection="row"
-    //           alignItems="center"
-    //           justifyContent="center"
-    //         >
-    //           <h3>Enter Pin:</h3>
-
-    //           <input
-    //             style={{
-    //               border: "none",
-    //               marginLeft: "0.5rem",
-    //               marginTop:"5px",
-    //               outlineColor: "#318AF4",
-    //               lineHeight: "1rem",
-    //               fontSize:"1.08rem",
-    //               width:"5.5rem",
-    //               padding:"5px",
-    //               color:"#093EF0"
-    //             }}
-    //             type="tel"
-    //             placeholder="Enter PIN"
-    //             value={pinValue}
-    //             maxLength="6"
-    //             onChange={(e) => {
-    //               const value = e.target.value;
-    //               const char = value.slice(-1);
-    //               if ((char >= "0" && char <= "9") || value === "") {
-    //                 setPinValue(value);
-    //               }
-    //             }}
-    //             onKeyUp={(e) => (e.keyCode === 13 ? searchHandler() : "")}
-    //           ></input>
-    //         </Box>
-    //       </Grid>
-    //       <Grid item xs={12} md={12} lg={12} style={{ textAlign: "center" }}>
-    //         <small className="field-error-msg">{errorMsg}</small>
-    //       </Grid>
-    //       <Grid item xs={12}>
-    //         <Button variant="outlined" color="primary" onClick={searchHandler} style={{borderRadius:"25px", lineHeight:"20px", marginBottom:"12px", borderColor:"#318AF4" }}>
-    //           Search
-    //         </Button>
-    //       </Grid>
-    //     </Paper>
-    //   </Grid>
-    //   <Grid
-    //     container
-    //     style={{
-    //       width: "50%",
-    //     }}
-
-    //   >
-    //     {centers ? (
-    //       centers.length === 0 ? (
-    //         <h2>No Centers found at this PIN code and Date.</h2>
-    //       ) : (
-    //         centers.map((item, i) => (
-    //           <Centers key={i} data={item} sessions={item.sessions} />
-    //         ))
-    //       )
-    //     ) : (
-    //       ""
-    //     )}
-    //   </Grid>
-    // </div>
-
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     <div className="App">
       <Container
         style={{
@@ -197,36 +67,59 @@ function App() {
         className="hero"
       >
         <div
-          style={{ width: "50%", height: "100%", position: "relative" }}
+          style={{
+            width: "50%",
+            height: "100%",
+            bottom: "-3rem",
+            position: "relative",
+          }}
           className="left_portion"
         >
           <div className="outer">
-            <Box
+            <div
               display="flex"
-              flexDirection="row"
               alignItems="center"
               justifyContent="center"
-              // marginLeft="-2rem"
-              // style={{ background: "aquamarine" }}
+              style={{ width: "100%" }}
             >
               {/* Demo */}
 
-              <h3>Select date : </h3>
-              <Button
+              <h3
+                style={{
+                  width: "100%",
+                  background: "#2f2061",
+                  textAlign: "center",
+                  fontWeight: "600",
+                  padding: "8px",
+                  color: "#f7f7f7",
+                  fontSize: "1.1rem",
+                }}
+              >
+                Select date
+              </h3>
+              <p
                 variant="outlined"
                 color="primary"
                 onClick={handleToggle}
                 style={{
-                  border: "none",
-                  color: "#318AF4",
+                  width: "100%",
+                  cursor: "pointer",
+                  // border: "none",
+                  color: "#2f2061",
+                  padding: "10px",
                   fontSize: "1.1rem",
-                  marginTop: "8px",
+                  margin: "0",
+                  fontWeight: "700",
+                  marginTop: "2px",
+                  background: "#f7f7f7",
+                  boxShadow: "11px 11px 11px 1px rgb(45 27 90 / 20%)",
+                  textAlign: "center",
                 }}
               >
                 {`${dateValue.getDate()}-${
                   dateValue.getMonth() + 1
                 }-${dateValue.getFullYear()}`}
-              </Button>
+              </p>
               <Backdrop
                 className={classes.backdrop}
                 open={open}
@@ -241,27 +134,41 @@ function App() {
                   }}
                 />
               </Backdrop>
-            </Box>
+            </div>
             {/* ////////////////////////////////////////////////////////////// */}
-            <Box
+            <div
               display="flex"
               flexDirection="row"
               alignItems="center"
               justifyContent="center"
+              style={{ width: "100%", marginTop: "10px" }}
             >
-              <h3>Enter Pin:</h3>
+              <h3
+                style={{
+                  width: "100%",
+                  background: "#2f2061",
+                  textAlign: "center",
+                  fontWeight: "600",
+                  padding: "8px",
+                  color: "#f7f7f7",
+                  fontSize: "1.1rem",
+                }}
+              >
+                Enter Pin
+              </h3>
 
               <input
                 style={{
                   border: "none",
-                  marginLeft: "0.5rem",
-                  marginTop: "5px",
                   outlineColor: "#318AF4",
-                  lineHeight: "1rem",
                   fontSize: "1.08rem",
-                  width: "5.5rem",
-                  padding: "5px",
-                  color: "#093EF0",
+                  width: "100%",
+                  padding: "10px",
+                  color: "#2f2061",
+                  textAlign: "center",
+                  fontWeight: "700",
+                  boxShadow: "11px 11px 11px 1px rgb(45 27 90 / 20%) ",
+                  outline:"none"
                 }}
                 type="tel"
                 placeholder="Enter PIN"
@@ -276,21 +183,24 @@ function App() {
                 }}
                 onKeyUp={(e) => (e.keyCode === 13 ? searchHandler() : "")}
               ></input>
-            </Box>
+            </div>
             {/* ////////////////////////////////////////////////////////////////////////// */}
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center",marginTop:"5px" }}>
               <h4 className="field-error-msg">{errorMsg}</h4>
             </div>
             <div>
               <Button
-                variant="outlined"
+                variant="contained"
                 color="primary"
                 onClick={searchHandler}
                 style={{
-                  borderRadius: "25px",
-                  lineHeight: "20px",
-                  marginBottom: "12px",
-                  borderColor: "#318AF4",
+                  // borderRadius: "25px",
+                  // lineHeight: "20px",
+                  // marginBottom: "12px",
+                  // borderColor: "#318AF4",
+                  boxShadow: "11px 11px 11px 1px rgb(45 27 90 / 50%) ",
+
+                  color: "white",
                 }}
               >
                 Search
@@ -299,24 +209,24 @@ function App() {
           </div>
         </div>
       </Container>
-          <Grid
-            container
-            style={{
-              width: "50%",
-            }}
-          >
-            {centers ? (
-              centers.length === 0 ? (
-                <h2>No Centers found at this PIN code and Date.</h2>
-              ) : (
-                centers.map((item, i) => (
-                  <Centers key={i} data={item} sessions={item.sessions} />
-                ))
-              )
-            ) : (
-              ""
-            )}
-          </Grid>
+      <Grid
+        container
+        style={{
+          width: "50%",
+        }}
+      >
+        {centers ? (
+          centers.length === 0 ? (
+            <h2>No Centers found at this PIN code and Date.</h2>
+          ) : (
+            centers.map((item, i) => (
+              <Centers key={i} data={item} sessions={item.sessions} />
+            ))
+          )
+        ) : (
+          ""
+        )}
+      </Grid>
     </div>
   );
 }
