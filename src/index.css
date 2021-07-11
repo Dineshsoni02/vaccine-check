@@ -1,14 +1,98 @@
-body {
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+input,
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+span {
+  user-select: text;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --font-small: 12px;
+  --font-medium: 16px;
+  --font-large: 24px;
+  --font-larger: 36px;
+  --font-gaint: 48px;
+  /* --primary-color: #c105fa;
+  --secondary-color: #16e9b6; */
+  --primary-color: #1ae56d;
+  --secondary-color: #e56d1a;
+  --error-color: #e91616;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.4;
+}
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin: auto;
+}
+p {
+  font-size: var(--font-medium);
+  color: #515257;
+  color: #101116;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 5px;
+}
+
+label {
+  font-size: var(--font-small);
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+hr {
+  background: #afacad;
+  margin: 4px 0;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.473); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(105, 166, 219, 0.445) ;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-moz-selection { background: RGB(105, 165, 219); 
+color: RGB(244, 243, 249);
+}
+::selection { background: RGB(105, 165, 219); 
+  color: RGB(244, 243, 249);
 }
