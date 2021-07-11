@@ -1,4 +1,8 @@
-To check the availability of slots in Vaccination centers of desired area using PIN Code... 
+
+
+
+𝐓𝐨 𝐜𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐨𝐟 𝐬𝐥𝐨𝐭𝐬 𝐢𝐧 𝐕𝐚𝐜𝐜𝐢𝐧𝐚𝐭𝐢𝐨𝐧 𝐜𝐞𝐧𝐭𝐞𝐫𝐬 𝐨𝐟 𝐝𝐞𝐬𝐢𝐫𝐞𝐝 𝐚𝐫𝐞𝐚 𝐮𝐬𝐢𝐧𝐠 𝐏𝐈𝐍 𝐂𝐨𝐝𝐞...
+
 
 
   
